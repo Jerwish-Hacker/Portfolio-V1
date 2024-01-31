@@ -1,0 +1,331 @@
+#nav a {
+    all: unset;
+}
+
+.justify {
+    text-align: justify;
+}
+.div{
+    overflow: hidden;
+}
+#bg-photo {
+    width: 40%;
+    position: absolute;
+    z-index: -1;
+    right: 5%;
+    top: 5%;
+    object-fit: cover;
+    /* height: 100%; */
+    /* border-radius: 50%; */
+    animation-name: bg-photo-moving;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* border: 100px  #fbd413 solid; */
+    /* border-style: dashed; */
+    /* border-color: black; */
+}
+
+@keyframes bg-photo-moving {
+
+    to {
+        top: 6%;
+        right: 6%;
+    }
+}
+
+#small-circle {
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    background-color: #fbd413;
+    border: 100px solid #fbd413;
+    border-radius: 50%;
+    z-index: -2;
+    right: -50%;
+    transform: scale(300%);
+    animation-name: small-circle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes small-circle {
+
+    to {
+        /* background-color: black; */
+        transform: scale(290%);
+    }
+}
+
+#very-small-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fbd413;
+    border-radius: 50%;
+    z-index: -2;
+    left: 20%;
+    top: 20%;
+    animation-name: very-small-circle;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes very-small-circle {
+    to {
+        /* background-color: black; */
+        /* transform: scale(290%); */
+        left: 21%;
+        top: 21%;
+    }
+}
+
+#home {
+    position: relative;
+    overflow: hidden;
+}
+
+#runing-letter {
+    position: absolute;
+    /* top: 65%; */
+    bottom: 20%;
+    font-size: 100px;
+}
+
+#change_text {
+    color: #fbd413;
+}
+
+.box {
+    opacity: 0;
+    transform: translateX(10%);
+    transition-duration: 1.5s;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+}
+
+.box:nth-child(odd) {
+    transform: translateX(-10%);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0) !important;
+}
+
+body {
+    /* cursor: url("./img/a.png"),auto;     */
+    overflow-x: hidden;
+}
+
+nav a:hover {
+    cursor: pointer;
+    color: #fbd413;
+}
+
+
+
+#form-box input {
+    all: unset;
+    color: white;
+    width: 40%;
+    padding: 20px;
+    background-color: #161616;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#form-box textarea {
+    all: unset;
+    width: 90%;
+    padding: 30px;
+    background-color: #161616;
+    border-radius: 10px;
+    color: white;
+    border: 2px solid black;
+
+}
+
+#form-box button {
+    all: unset;
+    border: 2px solid #fbd413;
+    color: white;
+    padding: 10px 80px;
+    font-size: 18px;
+    transition-duration: 0.8s;
+    transition-property: color background-color;
+}
+
+#form-box button:Hover {
+    color: #161616;
+    background-color: #fbd413;
+}
+
+#skills-box i {
+    font-size: 100px;
+}
+
+#skill-bg,
+#project-bg {
+    width: 50%;
+    border: 40px solid #fbd413;
+    border-bottom: none;
+    border-top: none;
+}
+
+.career-box {
+    position: sticky;
+    top: 10%;
+    background-color: #161616;
+    border-right: 5px solid #fbd413;
+}
+.career-box:nth-child(even){
+    border-left: 5px solid #fbd413;
+    border-right: none;
+}
+
+@media screen and (max-width: 1200px) {
+    #skills-box i {
+        font-size: 80px;
+    }
+
+    #skill-bg,
+    #project-bg {
+        width: 60%;
+        border: 40px solid #fbd413;
+    border-bottom: none;
+    border-top: none;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #runing-letter {
+        font-size: 80px;
+    }
+
+    #skill-bg,
+    #project-bg {
+        width: 80%;
+        border: 40px solid #fbd413;
+    border-bottom: none;
+    border-top: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #bg-photo {
+        width: 55%;
+        top: 10%;
+    }
+
+    #runing-letter {
+        bottom: 15%;
+    }
+
+    #very-small-circle {
+        display: none;
+    }
+
+    #skill-bg,
+    #project-bg {
+        width: 90%;
+        border: 40px solid #fbd413;
+        border-bottom: none;
+        border-top: none;
+    }
+    .career-box {
+        border: none;
+    }
+    .career-box:nth-child(even) {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #skills-box i {
+        font-size: 60px;
+    }
+    #small-circle {
+        display: none;
+    }
+    #bg-photo {
+        width: 70%;        
+        display: block;
+        animation: none;
+    }
+    #runing-letter {
+        font-size: 70px;
+    }
+    #skill-bg,
+    #project-bg {
+        width: 90%;
+        border: 20px solid #fbd413;
+        border-bottom: none;
+        border-top: none;
+    }
+    #form-box input{
+        width: 100%;
+        padding:0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #form-box textarea{
+        width: 100%;
+        padding:0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+   
+}
+
+@media screen and (max-width: 400px) {
+    #bg-photo {
+        width: 90%;        
+        display: block;
+        animation: none;
+    }
+    #runing-letter {
+        top: 60%;
+        font-size:50px;
+    }
+    .box {
+        opacity: 0;
+        transform: translateX(0%);
+        transition-duration: 1.5s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+    }
+    .show {
+        opacity: 1;
+        transform: translateX(0) !important;
+    }
+    .box:nth-child(odd) {
+        transform: translateX(0%);
+    }
+
+    #skills-box i {
+        font-size: 50px;
+    }
+    #skill-bg,
+    #project-bg {
+        width: 90%;
+        border: 15px solid #fbd413;
+        border-bottom: none;
+        border-top: none;
+    }
+  
+   
+}
+
+
+
