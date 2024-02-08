@@ -1,3 +1,7 @@
+body{
+    scroll-behavior: smooth;
+}
+
 #nav a {
     all: unset;
 }
@@ -22,6 +26,7 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+
     /* border: 100px  #fbd413 solid; */
     /* border-style: dashed; */
     /* border-color: black; */
@@ -190,6 +195,26 @@ nav a:hover {
     border-right: none;
 }
 
+#scroll-down-finger {        
+    width: 100px;
+    color: #161616;
+    position: absolute;
+    bottom: 1%;
+    right: 2%;
+    animation: .5s ease-in-out infinite  alternate scroll-down-animation;   
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+.d-none-myeffect{
+    opacity: 0;
+}
+
+@keyframes scroll-down-animation{   
+    to{
+        transform:scale(1.05);
+    }
+}
+
 @media screen and (max-width: 1200px) {
     #skills-box i {
         font-size: 80px;
@@ -326,6 +351,4 @@ nav a:hover {
   
    
 }
-
-
 

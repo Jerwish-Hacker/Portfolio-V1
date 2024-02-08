@@ -17,3 +17,15 @@ function checkboxes() {
         }
     });
 }
+
+
+
+window.addEventListener('scroll', function() {
+    const scrolldownfinger=document.querySelector("#scroll-down-finger");    
+    if (window.scrollY > 0) {
+        scrolldownfinger.classList.add('d-none-myeffect');                
+
+    } else {
+        scrolldownfinger.classList.remove('d-none-myeffect') ;             
+    }
+  });
