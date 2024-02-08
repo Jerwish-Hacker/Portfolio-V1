@@ -52,7 +52,7 @@ window.addEventListener('scroll', function() {
         ) * 100;        
         percentage.style.width=scrollPercentage.toFixed(0)+"%";
 
-        if(scrollPercentage==100){
+        if(scrollPercentage>=98){
             upscroll.classList.remove('d-none-myeffect');
         }
         else{
