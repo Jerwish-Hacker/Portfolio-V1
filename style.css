@@ -208,11 +208,28 @@ nav a:hover {
 .d-none-myeffect{
     opacity: 0;
 }
+#up-scroll{
+    /* animation: .5s ease-in-out infinite  alternate scroll-down-animation;    */
+    transition-duration: 1s;
+    transition-property: opacity;
+}
+
+
 
 @keyframes scroll-down-animation{   
     to{
         transform:scale(1.05);
     }
+}
+
+
+#percentage{
+    /* width: 100vw; */
+    height: 3px;
+    background-color: #fbd413;
+    position: fixed;
+    top: 0;
+    z-index: 99;
 }
 
 @media screen and (max-width: 1200px) {

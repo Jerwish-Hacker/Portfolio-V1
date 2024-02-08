@@ -25,7 +25,39 @@ window.addEventListener('scroll', function() {
     if (window.scrollY > 0) {
         scrolldownfinger.classList.add('d-none-myeffect');                
 
-    } else {
+    }    
+     else {
         scrolldownfinger.classList.remove('d-none-myeffect') ;             
     }
   });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var percentage = document.querySelector('#percentage');
+    var upscroll = document.querySelector('#up-scroll');
+
+    window.addEventListener('scroll', function () {
+        // Get the HTML and body elements
+        const htmlElement = document.documentElement;
+        const bodyElement = document.body;
+
+        // Define variables for scroll top and scroll height properties
+        const scrollTopProperty = 'scrollTop';
+        const scrollHeightProperty = 'scrollHeight';
+
+        // Calculate the scroll position percentage
+        const scrollPercentage = (
+            (htmlElement[scrollTopProperty] || bodyElement[scrollTopProperty]) /
+            ((htmlElement[scrollHeightProperty] || bodyElement[scrollHeightProperty]) - htmlElement.clientHeight)
+        ) * 100;        
+        percentage.style.width=scrollPercentage.toFixed(0)+"%";
+
+        if(scrollPercentage==100){
+            upscroll.classList.remove('d-none-myeffect');
+        }
+        else{
+            upscroll.classList.add('d-none-myeffect');
+        }
+
+    });
+});
