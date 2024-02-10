@@ -1,4 +1,4 @@
-body{
+body {
     scroll-behavior: smooth;
 }
 
@@ -9,9 +9,11 @@ body{
 .justify {
     text-align: justify;
 }
-.div{
+
+.div {
     overflow: hidden;
 }
+
 #bg-photo {
     width: 40%;
     position: absolute;
@@ -171,6 +173,16 @@ nav a:hover {
     color: #161616;
     background-color: #fbd413;
 }
+footer a{    
+    all: unset;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out;
+    transition-property: transform;
+}
+footer a:hover{    
+    transform: scale(1.2);    
+    cursor: pointer;    
+}
 
 #skills-box i {
     font-size: 100px;
@@ -187,43 +199,82 @@ nav a:hover {
 .career-box {
     position: sticky;
     top: 10%;
-    background-color: #161616;
+    /* background-color: #161616; */
+    background-color: rgb(128, 128, 128, 0.5);
     border-right: 5px solid #fbd413;
 }
-.career-box:nth-child(even){
+.career-box h3{
+    color: #fbd413;
+}
+
+.career-box:nth-child(even) {
     border-left: 5px solid #fbd413;
     border-right: none;
 }
+.career-box:nth-child(3){
+    top: 50%;
+}
+.career-box:nth-child(4){
+    top: 50%;
+}
 
-#scroll-down-finger {        
+#scroll-down-finger {
     width: 100px;
     color: #161616;
     position: absolute;
     bottom: 1%;
     right: 2%;
-    animation: .5s ease-in-out infinite  alternate scroll-down-animation;   
+    animation: .5s ease-in-out infinite alternate scroll-down-animation;
     transition-duration: 1s;
     transition-property: opacity;
 }
-.d-none-myeffect{
+
+.d-none-myeffect {
     opacity: 0;
 }
-#up-scroll{
-    /* animation: .5s ease-in-out infinite  alternate scroll-down-animation;    */
+
+#up-scroll {
     transition-duration: 1s;
     transition-property: opacity;
+    width: 50px;
+    height: 50px;
+    background-color: #fbd413;
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    bottom: 300%;
+}
+
+#up-scroll:hover {
+    animation: .5s  ease-in-out scroll-up-animation;
+    cursor: pointer;    
 }
 
 
-
-@keyframes scroll-down-animation{   
-    to{
-        transform:scale(1.05);
+@keyframes scroll-up-animation {
+    to {
+        transform: rotate(360deg);
     }
 }
 
+@keyframes scroll-down-animation {
+    to {
+        transform: scale(1.02);
+    }
+}
+#experience{
+    position: relative;
+    /* background-color: white; */
+}
+#summary-bg{
+    position: absolute;
+    right: 0%;
+    height:100%;   
+   
+}
 
-#percentage{
+
+#percentage {
     /* width: 100vw; */
     height: 3px;
     background-color: #fbd413;
@@ -241,8 +292,8 @@ nav a:hover {
     #project-bg {
         width: 60%;
         border: 40px solid #fbd413;
-    border-bottom: none;
-    border-top: none;
+        border-bottom: none;
+        border-top: none;
     }
 }
 
@@ -255,8 +306,17 @@ nav a:hover {
     #project-bg {
         width: 80%;
         border: 40px solid #fbd413;
-    border-bottom: none;
-    border-top: none;
+        border-bottom: none;
+        border-top: none;
+    }
+    .career-box {        
+        background-color: #161616;           
+    }
+    .career-box:nth-child(3){
+        top: 10%;
+    }
+    .career-box:nth-child(4){
+        top: 10%;
     }
 }
 
@@ -281,9 +341,11 @@ nav a:hover {
         border-bottom: none;
         border-top: none;
     }
+
     .career-box {
         border: none;
     }
+
     .career-box:nth-child(even) {
         border: none;
     }
@@ -293,17 +355,21 @@ nav a:hover {
     #skills-box i {
         font-size: 60px;
     }
+
     #small-circle {
         display: none;
     }
+
     #bg-photo {
-        width: 70%;        
+        width: 70%;
         display: block;
         animation: none;
     }
+
     #runing-letter {
         font-size: 70px;
     }
+
     #skill-bg,
     #project-bg {
         width: 90%;
@@ -311,35 +377,39 @@ nav a:hover {
         border-bottom: none;
         border-top: none;
     }
-    #form-box input{
+
+    #form-box input {
         width: 100%;
-        padding:0;
+        padding: 0;
         padding-top: 15px;
         padding-bottom: 15px;
         padding-left: 5px;
         padding-right: 5px;
     }
-    #form-box textarea{
+
+    #form-box textarea {
         width: 100%;
-        padding:0;
+        padding: 0;
         padding-top: 15px;
         padding-bottom: 15px;
         padding-left: 5px;
         padding-right: 5px;
     }
-   
+
 }
 
 @media screen and (max-width: 400px) {
     #bg-photo {
-        width: 90%;        
+        width: 90%;
         display: block;
         animation: none;
     }
+
     #runing-letter {
         top: 60%;
-        font-size:50px;
+        font-size: 50px;
     }
+
     .box {
         opacity: 0;
         transform: translateX(0%);
@@ -347,10 +417,12 @@ nav a:hover {
         transition-property: all;
         transition-timing-function: ease-in-out;
     }
+
     .show {
         opacity: 1;
         transform: translateX(0) !important;
     }
+
     .box:nth-child(odd) {
         transform: translateX(0%);
     }
@@ -358,6 +430,7 @@ nav a:hover {
     #skills-box i {
         font-size: 50px;
     }
+
     #skill-bg,
     #project-bg {
         width: 90%;
@@ -365,7 +438,6 @@ nav a:hover {
         border-bottom: none;
         border-top: none;
     }
-  
-   
-}
 
+
+}
