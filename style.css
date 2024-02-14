@@ -13,7 +13,35 @@ body {
 .div {
     overflow: hidden;
 }
-
+#loader{
+    /* display: none; */
+    width: 50px;
+    height: 50px;
+    border: 5px solid #fbd413;
+    border-radius: 50%;
+    border-left-color: #161616;    
+    border-right-color: #161616;  
+    animation: 1s infinite alternate ease-in-out bgloading;  
+}
+.hidden{
+    opacity: 0;
+    visibility: hidden !important;
+}
+@keyframes bgloading {
+    to{
+        transform: rotate(360deg);        
+    }    
+}
+.loading-box{        
+    position: fixed;
+    top: 0;
+    /* display: block; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
 #bg-photo {
     width: 40%;
     position: absolute;
@@ -21,21 +49,14 @@ body {
     right: 5%;
     top: 5%;
     object-fit: cover;
-    /* height: 100%; */
-    /* border-radius: 50%; */
-    animation-name: bg-photo-moving;
     animation-duration: 7s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-direction: alternate;
-
-    /* border: 100px  #fbd413 solid; */
-    /* border-style: dashed; */
-    /* border-color: black; */
+    animation-direction: alternate;    
+    animation-name: bg-photo-moving;
 }
 
 @keyframes bg-photo-moving {
-
     to {
         top: 6%;
         right: 6%;
