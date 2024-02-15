@@ -61,7 +61,7 @@ window.addEventListener('scroll', function() {
 
     });
 });
-const loader=document.querySelector("#loader");  
+const loader=document.querySelector(".loading-box");  
 window.addEventListener('load', function() {
     loader.classList.add("hidden")  
     
